@@ -22,6 +22,8 @@ const scene = new THREE.Scene();
  */
 // Geometry
 const waterGeometry = new THREE.PlaneGeometry(2, 2, 512, 512);
+waterGeometry.deleteAttribute("normal"); // no longer used as we now compute it
+waterGeometry.deleteAttribute("uv"); // no longer used as we now compute it
 
 // Colors
 debugObject.depthColor = "#ff4000";
